@@ -1,5 +1,11 @@
 @import '../App/App.scss';
 
+.card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card {
   width: 320px;
   height: 480px;
@@ -8,6 +14,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-bottom: 14px;
 }
 
 .card__content {
@@ -80,4 +87,10 @@
   padding-top: 8px;
   display: block;
   font-size: 21px;
+}
+
+.card__status {
+  font-size: 13px;
+  line-height: 15px;
+  color: $white-color;
 }

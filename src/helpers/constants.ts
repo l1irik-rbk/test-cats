@@ -11,6 +11,16 @@ export const CARDS: ICard[] = [
       { cardInfoID: 12, cardInfoNumber: 1, cardInfoText: 'мышь в подарок' },
     ],
     cardWeight: '2',
+    status: {
+      selected: {
+        selected: false,
+        selectedText: 'Печень утки разварная с артишоками.',
+      },
+      available: {
+        available: true,
+        availableText: 'Печалька, с фуа-гра закончился.',
+      },
+    },
   },
   {
     cardID: 2,
@@ -22,6 +32,16 @@ export const CARDS: ICard[] = [
       { cardInfoID: 12, cardInfoNumber: 2, cardInfoText: 'мыши в подарок' },
     ],
     cardWeight: '0,5',
+    status: {
+      selected: {
+        selected: false,
+        selectedText: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
+      },
+      available: {
+        available: true,
+        availableText: 'Печалька, с рыбой закончился.',
+      },
+    },
   },
   {
     cardID: 3,
@@ -34,6 +54,16 @@ export const CARDS: ICard[] = [
       { cardInfoID: 13, cardInfoNumber: 0, cardInfoText: 'заказчик доволен' },
     ],
     cardWeight: '5',
+    status: {
+      selected: {
+        selected: false,
+        selectedText: 'Филе из цыплят с трюфелями в бульоне.',
+      },
+      available: {
+        available: false,
+        availableText: 'Печалька, с курой закончился.',
+      },
+    },
   },
 ];
 

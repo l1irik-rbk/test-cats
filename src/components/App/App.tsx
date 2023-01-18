@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Card from '../Card/Card';
-import { CARDS } from '../../helpers/constants';
+import { useAppSelector } from '../../Redux/hooks';
+
 import './App.scss';
 
 const App = () => {
-  const [cards, setCards] = useState(CARDS);
+  const { cards } = useAppSelector((state) => state.app);
 
   return (
     <section className="cards">
