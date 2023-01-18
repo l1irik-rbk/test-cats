@@ -1,0 +1,47 @@
+$white-color: #FFFFFF;
+$black-color: #000000;
+$blue-color: #1698D9;
+$pink-color: #E52E7A;
+$grey-color: #666666;
+$cardBG-color: #F2F2F2;
+
+html {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $grey-color;
+}
+
+.cards {
+  background-image: url(../../../public/assets/bg.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.cards__title {
+  font-family: 'Exo 2.0', sans-serif;
+  font-weight: 250;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: $white-color;
+  padding-top: 36px;
+  margin-bottom: 25px;
+}
+
+.cards__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+

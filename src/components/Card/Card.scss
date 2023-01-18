@@ -1,0 +1,83 @@
+@import '../App/App.scss';
+
+.card {
+  width: 320px;
+  height: 480px;
+  background: linear-gradient(135deg, transparent 31px, $blue-color 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card__content {
+  width: 312px;
+  height: 472px;
+  background: linear-gradient(135deg, transparent 31px, $cardBG-color 0);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__content-description {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 20px 0 5px 47px;
+}
+
+.card__content-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: $black-color;
+  margin-left: 44px;
+}
+
+.card__content-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: $black-color;
+  margin-left: 47px;
+  margin-bottom: 15px;
+}
+
+.card__content-amount {
+  margin-left: 47px;
+}
+
+.card__content-amount__counter {
+  font-weight: 700;
+}
+
+.card__content-image {
+  display: block;
+  width: 368px;
+  height: 360px;
+  position: absolute;
+  top: 204px;
+  right: -24px;
+}
+
+.card__content-weight {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 12px;
+  right: 12px;
+  margin-left: auto;
+  text-align: center;
+  font-size: 42px;
+  line-height: 22px;
+  color: $white-color;
+  z-index: 999;
+  padding-top: 24px;
+  background-color: $blue-color;
+  border-radius: 50%;
+}
+
+.card__content-weight__units {
+  padding-top: 8px;
+  display: block;
+  font-size: 21px;
+}
