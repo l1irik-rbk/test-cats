@@ -108,3 +108,23 @@
 .card__content-weight--selected {
   background-color: $pink-color;
 }
+
+.card--hover {
+  background: linear-gradient(135deg, transparent 31px, $blueHover-color 0);
+}
+
+.card__content-weight--hover {
+  background-color: $blueHover-color;
+}
+
+.card--selected-hover {
+  background: linear-gradient(135deg, transparent 31px, $pinkHover-color 0);
+}
+
+.card__content-description--selected-hover {
+  color: $pinkHover-color;
+}
+
+.card__content-weight--selected-hover {
+  background-color: $pinkHover-color;
+}

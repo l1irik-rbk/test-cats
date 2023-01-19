@@ -14,3 +14,8 @@
   color: $blue-color;
   border-bottom: 1px dashed $blue-color;
 }
+
+.card__status-btn--hover {
+  color: $blueHover-color;
+  border-bottom: 1px dashed $blueHover-color;
+}

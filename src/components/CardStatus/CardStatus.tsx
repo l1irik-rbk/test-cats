@@ -11,6 +11,9 @@ const CardStatus = React.memo(
     selectedText,
     isNotAvailableText,
     handleCard,
+    mousePosition,
+    handleMouseEnter,
+    handleMouseLeave,
   }: ICardStatus) => {
     const handleClick = () => {
       handleCard(cardID);
@@ -25,7 +28,12 @@ const CardStatus = React.memo(
         ) : (
           <p className="card__status-text">
             Чего сидишь? Порадуй котэ,{' '}
-            <button className="card__status-btn" onClick={handleClick}>
+            <button
+              className={`card__status-btn ${mousePosition ? 'card__status-btn--hover' : ''}`}
+              onClick={handleClick}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               купи.
             </button>
           </p>

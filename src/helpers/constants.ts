@@ -4,6 +4,7 @@ export const CARDS: ICard[] = [
   {
     cardID: 1,
     cardDescription: 'Сказочное заморское яство',
+    cardSelectedHoverDescription: 'Котэ не одобряет?',
     cardTitle: 'Нямушка',
     cardSubtitle: 'с фуа-гра',
     cardInfo: [
@@ -25,6 +26,7 @@ export const CARDS: ICard[] = [
   {
     cardID: 2,
     cardDescription: 'Сказочное заморское яство',
+    cardSelectedHoverDescription: 'Котэ не одобряет?',
     cardTitle: 'Нямушка',
     cardSubtitle: 'с рыбой',
     cardInfo: [
@@ -46,6 +48,7 @@ export const CARDS: ICard[] = [
   {
     cardID: 3,
     cardDescription: 'Сказочное заморское яство',
+    cardSelectedHoverDescription: 'Котэ не одобряет?',
     cardTitle: 'Нямушка',
     cardSubtitle: 'с курой',
     cardInfo: [

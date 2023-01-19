@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import CardInfo from '../CardInfo/CardInfo';
 import CardStatus from '../CardStatus/CardStatus';
@@ -8,7 +8,9 @@ import { ICard } from '../../types';
 import './Card.scss';
 
 const Card = React.memo(({ card }: { card: ICard }) => {
+  const [mousePosition, setMousePosition] = useState(false);
   const dispatch = useAppDispatch();
+
   const {
     cardID,
     status: { available, selected },
@@ -23,6 +25,15 @@ const Card = React.memo(({ card }: { card: ICard }) => {
     if (isNotAvailable) return;
 
     dispatch(setSelected(cardID));
+    setMousePosition(false);
+  };
+
+  const handleMouseEnter = () => {
+    setMousePosition(true);
+  };
+
+  const handleMouseLeave = () => {
+    setMousePosition(false);
   };
 
   return (
@@ -32,6 +43,9 @@ const Card = React.memo(({ card }: { card: ICard }) => {
         isSelected={isSelected}
         isNotAvailable={isNotAvailable}
         handleCard={handleCard}
+        mousePosition={mousePosition}
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
       />
 
       <CardStatus
@@ -41,6 +55,9 @@ const Card = React.memo(({ card }: { card: ICard }) => {
         selectedText={selectedText}
         isNotAvailableText={isNotAvailableText}
         handleCard={handleCard}
+        mousePosition={mousePosition}
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
       />
     </div>
   );
