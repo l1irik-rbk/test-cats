@@ -10,7 +10,7 @@ export const CARDS: ICard[] = [
       { cardInfoID: 11, cardInfoNumber: 10, cardInfoText: 'порций' },
       { cardInfoID: 12, cardInfoNumber: 1, cardInfoText: 'мышь в подарок' },
     ],
-    cardWeight: '2',
+    cardWeight: '0,5',
     status: {
       selected: {
         selected: false,
@@ -31,10 +31,10 @@ export const CARDS: ICard[] = [
       { cardInfoID: 11, cardInfoNumber: 40, cardInfoText: 'порций' },
       { cardInfoID: 12, cardInfoNumber: 2, cardInfoText: 'мыши в подарок' },
     ],
-    cardWeight: '0,5',
+    cardWeight: '2',
     status: {
       selected: {
-        selected: false,
+        selected: true,
         selectedText: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
       },
       available: {

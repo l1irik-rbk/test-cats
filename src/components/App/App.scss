@@ -1,9 +1,13 @@
 $white-color: #FFFFFF;
 $black-color: #000000;
 $blue-color: #1698D9;
-$pink-color: #E52E7A;
+$pink-color: #D91667;
 $grey-color: #666666;
+$yellow-color: #FFFF66;
 $cardBG-color: #F2F2F2;
+$disabled-color: #B3B3B3;
+
+
 
 html {
   font-family: 'Trebuchet MS', sans-serif;
@@ -11,6 +15,15 @@ html {
   font-size: 14px;
   line-height: 16px;
   color: $grey-color;
+}
+
+button {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
 }
 
 .cards {

@@ -1,0 +1,12 @@
+@import '../App/App.scss';
+
+.card__status {
+  font-size: 13px;
+  line-height: 15px;
+  color: $white-color;
+}
+
+.card__status-btn {
+  color: $blue-color;
+  border-bottom: 1px dashed $blue-color;
+}

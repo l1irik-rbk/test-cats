@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border-radius: 12px;
   margin-bottom: 14px;
 }
 
@@ -89,8 +90,45 @@
   font-size: 21px;
 }
 
-.card__status {
+.card--disabled {
+  background: linear-gradient(135deg, transparent 31px, $disabled-color 0);
+  cursor: auto;
+}
+
+.card__content-image--disabled {
+  opacity: 0.5;
+}
+
+.disabled-text {
+  color: $disabled-color;
+}
+
+.card__content-weight--disabled {
+  background-color: $disabled-color;
+}
+
+.card--selected {
+  background: linear-gradient(135deg, transparent 31px, $pink-color 0);
+}
+
+.card__content-weight--selected {
+  background-color: $pink-color;
+}
+
+
+
+
+.card__status-text {
   font-size: 13px;
   line-height: 15px;
   color: $white-color;
+}
+
+.card__status-text--available {
+  color: $yellow-color;
+}
+
+.card__status-btn {
+  color: $blue-color;
+  border-bottom: 1px dashed $blue-color;
 }

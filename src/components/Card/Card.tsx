@@ -1,37 +1,52 @@
 import React from 'react';
 
 import { MIN } from '../../helpers/constants';
+import { setClass } from '../../helpers/setClass';
+import { useAppDispatch } from '../../Redux/hooks';
+import { setSelected } from '../../Redux/slices/appSlice';
 import { ICard } from '../../types';
+import CardInfo from '../CardInfo/CardInfo';
+import CardStatus from '../CardStatus/CardStatus';
+
 import './Card.scss';
 
-const Card = ({ card }: { card: ICard }) => {
-  const { cardDescription, cardTitle, cardSubtitle, cardWeight, cardInfo } = card;
-  console.log(card);
+const Card = React.memo(({ card }: { card: ICard }) => {
+  const dispatch = useAppDispatch();
+  const {
+    cardID,
+    status: { available, selected },
+  } = card;
+
+  const isSelected = selected.selected;
+  const isNotAvailable = !available.available;
+  const selectedText = selected.selectedText;
+  const isNotAvailableText = available.availableText;
+
+  const handleCard = (cardID: number) => {
+    if (isNotAvailable) return;
+
+    dispatch(setSelected(cardID));
+  };
+
   return (
     <div className="card__container">
-      <div className="card">
-        <div className="card__content">
-          <p className="card__content-description">{cardDescription}</p>
-          <h4 className="card__content-title">{cardTitle}</h4>
-          <h5 className="card__content-subtitle">{cardSubtitle}</h5>
-          {cardInfo.map(({ cardInfoID, cardInfoNumber, cardInfoText }) => (
-            <p key={cardInfoID} className="card__content-amount">
-              <span className="card__content-amount__counter">
-                {cardInfoNumber > MIN ? `${cardInfoNumber} ` : ''}
-              </span>
-              {cardInfoText}
-            </p>
-          ))}
+      <CardInfo
+        card={card}
+        isSelected={isSelected}
+        isNotAvailable={isNotAvailable}
+        handleCard={handleCard}
+      />
 
-          <img className="card__content-image" src="./assets/cat.png" alt="cat" />
-          <div className="card__content-weight">
-            {cardWeight} <span className="card__content-weight__units">кг</span>
-          </div>
-        </div>
-      </div>
-      <div className="card__status">Чего сидишь? Порадуй котэ, купи.</div>
+      <CardStatus
+        isSelected={isSelected}
+        isNotAvailable={isNotAvailable}
+        cardID={cardID}
+        selectedText={selectedText}
+        isNotAvailableText={isNotAvailableText}
+        handleCard={handleCard}
+      />
     </div>
   );
-};
+});
 
 export default Card;

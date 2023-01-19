@@ -13,7 +13,15 @@ const initialState: IApp = {
 export const appSlice = createSlice({
   name: 'appSlice',
   initialState,
-  reducers: {},
+  reducers: {
+    setSelected: (state, action: PayloadAction<number>) => {
+      state.cards.map((card) => {
+        if (card.cardID === action.payload) {
+          card.status.selected.selected = !card.status.selected.selected;
+        }
+      });
+    },
+  },
 });
 
-export const {} = appSlice.actions;
+export const { setSelected } = appSlice.actions;
