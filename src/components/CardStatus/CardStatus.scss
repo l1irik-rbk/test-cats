@@ -1,9 +1,13 @@
 @import '../App/App.scss';
 
-.card__status {
+.card__status-text {
   font-size: 13px;
   line-height: 15px;
   color: $white-color;
+}
+
+.card__status-text--available {
+  color: $yellow-color;
 }
 
 .card__status-btn {

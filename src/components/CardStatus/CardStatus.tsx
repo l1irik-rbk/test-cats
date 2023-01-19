@@ -1,6 +1,6 @@
 import React from 'react';
-import { ICardStatus } from '../../types';
 
+import { ICardStatus } from '../../types';
 import './CardStatus.scss';
 
 const CardStatus = React.memo(
@@ -34,5 +34,4 @@ const CardStatus = React.memo(
     );
   }
 );
-
 export default CardStatus;

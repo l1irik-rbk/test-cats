@@ -1,9 +1,7 @@
 import React from 'react';
 
 import Card from '../Card/Card';
-import CardStatus from '../CardStatus/CardStatus';
 import { useAppSelector } from '../../Redux/hooks';
-
 import './App.scss';
 
 const App = () => {

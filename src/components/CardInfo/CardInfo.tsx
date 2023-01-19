@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { MIN } from '../../helpers/constants';
 import { setClass } from '../../helpers/setClass';
-import { ICard, ICardInfo } from '../../types';
+import { ICardInfo } from '../../types';
+import './CardInfo.scss';
 
-const CardInfo = ({ card, isSelected, isNotAvailable, handleCard }: ICardInfo) => {
+const CardInfo = React.memo(({ card, isSelected, isNotAvailable, handleCard }: ICardInfo) => {
   const { cardID, cardDescription, cardTitle, cardSubtitle, cardWeight, cardInfo } = card;
 
   const handleClick = () => {
@@ -59,6 +61,6 @@ const CardInfo = ({ card, isSelected, isNotAvailable, handleCard }: ICardInfo) =
       </div>
     </div>
   );
-};
+});
 
 export default CardInfo;
