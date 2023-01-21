@@ -1,0 +1,21 @@
+@import '../App/App.scss';
+
+.card__status-text {
+  font-size: 13px;
+  line-height: 15px;
+  color: $white-color;
+}
+
+.card__status-text--available {
+  color: $yellow-color;
+}
+
+.card__status-btn {
+  color: $blue-color;
+  border-bottom: 1px dashed $blue-color;
+}
+
+.card__status-btn--hover {
+  color: $blueHover-color;
+  border-bottom: 1px dashed $blueHover-color;
+}
