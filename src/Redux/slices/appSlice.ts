@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 import { CARDS } from '../../helpers/constants';
 import { ICard } from '../../types';
 

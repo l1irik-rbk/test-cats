@@ -70,4 +70,4 @@ export const CARDS: ICard[] = [
   },
 ];
 
-export const MIN = 1;
+export const MIN_GIFTS = 1;

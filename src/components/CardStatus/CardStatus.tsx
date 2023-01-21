@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { setClass } from '../../helpers/setClass';
+import { setElementClasses } from '../../helpers/setElementClasses';
 import { ICardStatus } from '../../types';
 import './CardStatus.scss';
 
@@ -19,6 +21,9 @@ const CardStatus = React.memo(
       handleCard(cardID);
     };
 
+    const btnClassesArr = ['card__status-btn', setClass(mousePosition, 'card__status-btn--hover')];
+    const btnClasses = setElementClasses(btnClassesArr);
+
     return (
       <div className="card__status">
         {isNotAvailable ? (
@@ -29,7 +34,7 @@ const CardStatus = React.memo(
           <p className="card__status-text">
             Чего сидишь? Порадуй котэ,{' '}
             <button
-              className={`card__status-btn ${mousePosition ? 'card__status-btn--hover' : ''}`}
+              className={btnClasses}
               onClick={handleClick}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
